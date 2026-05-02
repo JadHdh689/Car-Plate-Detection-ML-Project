@@ -1,2 +1,7 @@
-# Car-Plate-Detection-ML-Project
-License plate detection on 433 car images comparing YOLOv8n, Faster R-CNN, and RetinaNet. Models evaluated using mAP50-95, F1-score, and paired bootstrap analysis. YOLOv8n recommended for its best precision, stable training, and efficient architecture despite being statistically tied with Faster R-CNN on mAP50-95.
+License Plate Detection: A Comparative Study of Object Detection Architectures
+This project explores license plate detection on a dataset of 433 car images from Kaggle (Car Plate Detection, Pascal VOC XML annotations). Three object detection architectures are trained and compared on the same data split: YOLOv8n, Faster R-CNN (ResNet-50 FPN v2), and RetinaNet (ResNet-50 FPN v2).
+The models cover three distinct design philosophies: a lightweight one-stage detector (YOLOv8n, ~3M params), a heavy two-stage region-based detector (Faster R-CNN, ~43.7M params), and a heavy one-stage detector with focal loss (RetinaNet, ~38.2M params). All models were fine-tuned from pretrained weights on a 303/65/65 train/val/test split using Google Colab's T4 GPU.
+Evaluation uses precision, recall, F1-score, mAP50, and mAP50-95 as the primary metric. A paired bootstrap analysis (500 resamples) is performed on the test set to check whether the performance gap between the top two models is statistically significant.
+Key findings: YOLOv8n achieved the best test precision (0.94), F1 (0.91), and mAP50-95 (0.56), with the healthiest training curve and highest detection confidence. Faster R-CNN led on recall and mAP50 but overfit by epoch 2. RetinaNet was the weakest overall, plateauing early and collapsing at the end of training. The bootstrap analysis showed that YOLOv8n and Faster R-CNN are statistically tied on mAP50-95 (p = 0.74), but YOLOv8n is recommended given its stability, efficiency, and confident predictions.
+
+Authors: Jad Hdeife, Ahmad El Hariri
