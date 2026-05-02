@@ -46,4 +46,4 @@ All models were fine-tuned from pretrained weights on the same 303/65/65 train/v
 
 **Jad Hdeife** · **Ahmad El Hariri**
 
-*CMPS 261 — Machine Learning Project*
+
