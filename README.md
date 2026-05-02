@@ -16,7 +16,7 @@ All models were fine-tuned from pretrained weights on the same 303/65/65 train/v
 
 ## Dataset
 
-[Car Plate Detection](https://www.kaggle.com/datasets/andrewmvd/car-plate-detection) from Kaggle — 433 images with Pascal VOC XML annotations (471 total annotated plates). Labels were converted to YOLO format for training.
+[Car Plate Detection](https://www.kaggle.com/datasets/andrewmvd/car-plate-detection) from Kaggle - 433 images with Pascal VOC XML annotations (471 total annotated plates). Labels were converted to YOLO format for training.
 
 ## Results
 
@@ -32,11 +32,11 @@ All models were fine-tuned from pretrained weights on the same 303/65/65 train/v
 
 ## Key Takeaways
 
-🏆 **YOLOv8n** — Best precision, F1, mAP50-95. Healthiest training curve. Fewest, most confident detections.
+🏆 **YOLOv8n** - Best precision, F1, mAP50-95. Healthiest training curve. Fewest, most confident detections.
 
-📉 **Faster R-CNN** — Highest recall and mAP50, but overfit by epoch 2.
+📉 **Faster R-CNN** - Highest recall and mAP50, but overfit by epoch 2.
 
-⚠️ **RetinaNet** — Weakest overall. Plateaued early, collapsed at end of training.
+⚠️ **RetinaNet** - Weakest overall. Plateaued early, collapsed at end of training.
 
 ## Tech Stack
 
